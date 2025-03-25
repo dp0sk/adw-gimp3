@@ -1,0 +1,15 @@
+scrollbar {
+    background-color: transparent;
+}
+
+scrollbar:not(.overlay-indicator) {
+    margin: 3px;
+}
+
+scrollbar.vertical:not(.overlay-indicator) {
+    margin-left: -10px;
+}
+
+scrollbar+* {
+    background-color: transparent;
+}

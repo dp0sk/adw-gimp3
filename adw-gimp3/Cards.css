@@ -1,0 +1,42 @@
+GimpDock stack>widget>box>scrolledwindow,
+GimpDock stack>widget>box>label {
+
+    margin: 0 12px;
+}
+
+
+scrolledwindow {
+    background: @card_bg_color;
+    border-radius: 12px;
+    /* min-height: 128px; */
+}
+
+viewport,
+viewport list {
+    border-radius: 2px;
+    background-color: transparent;
+}
+
+scrolledwindow viewport>box {
+    padding: 12px;
+}
+
+scrolledwindow.frame treeview {
+    transition: all 300ms ease;
+}
+
+scrolledwindow treeview,
+scrolledwindow treeview header button {
+    background-color: transparent;
+}
+
+iconview:hover,
+scrolledwindow.frame treeview:hover,
+scrolledwindow.frame treeview:selected:hover
+{
+    background-color: rgba(222, 226, 223, 0.2);
+}
+scrolledwindow.frame treeview:selected,
+scrolledwindow treeview header button:focus {
+    background-color: rgba(222, 226, 223, 0.1);
+}

@@ -1,0 +1,29 @@
+/* #gimp-internal-dock-1 notebook:first-child {
+	border-top: 1px solid  rgb(56, 58, 58);
+}
+
+#gimp-internal-dock-2 notebook:first-child {
+	border-bottom: 1px solid  rgb(56, 58, 58);
+} */
+
+paned>separator {
+	box-shadow: none;
+	min-width: 1px;
+	min-height: 1px;
+	background: none;
+	background-color:  rgb(56, 58, 58);
+	outline: none;
+}
+
+separator.wide {
+	padding: 3px;
+	background-color: transparent;
+}
+
+box+separator {
+	border-left: 1px solid rgb(56, 58, 58);
+}
+
+notebook+separator {
+	border-right: 1px solid rgb(56, 58, 58);
+}

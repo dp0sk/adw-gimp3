@@ -1,0 +1,35 @@
+window.popup.csd decoration,
+window.popup.csd menu {
+    border-radius: 15px
+}
+
+window.popup.csd menu menuitem {
+    min-height: 20px;
+    border-radius: 10px;
+    padding-left: 0;
+}
+
+window.popup.csd menu separator {
+    background-color: @popover_fg_color;
+    opacity: .2;
+}
+
+window.popup.csd menu menuitem+arrow {
+    border-color: transparent;
+    min-height: 20px;
+    border-radius: 10px;
+    margin-top: 16px;
+}
+
+window.popup.csd menu arrow.top {
+    margin-bottom: 4px;
+    margin-top: 0;
+    border-color: transparent;
+    min-height: 20px;
+    border-radius: 10px;
+}
+
+window.popup.csd menu arrow.top:hover,
+window.popup.csd menu menuitem+arrow:hover {
+    background-color: @card_shade_color;
+}

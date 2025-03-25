@@ -1,0 +1,46 @@
+
+window:not(.csd):not(.maximized):not(.tiled-left):not(.tiled-bottom):not(.tiled-right):not(.tiled-top):not(.tiled),
+*:not(.maximized):not(.tiled-left):not(.tiled-bottom):not(.tiled-right):not(.tiled-top):not(.tiled) decoration {
+	border-radius: 15px;
+}
+
+*:not(.maximized):not(.tiled-left):not(.tiled-bottom):not(.tiled-right):not(.tiled-top):not(.tiled) headerbar {
+	border-radius: 15px 15px 0 0;
+}
+
+window.csd:not(.maximized):not(.tiled-left):not(.tiled-bottom):not(.tiled-right):not(.tiled-top):not(.tiled),
+dialog:not(.maximized):not(.tiled-left):not(.tiled-bottom):not(.tiled-right):not(.tiled-top):not(.tiled),
+GimpToolDialog:not(.maximized):not(.tiled-left):not(.tiled-bottom):not(.tiled-right):not(.tiled-top):not(.tiled),
+window:not(.maximized):not(.tiled-left):not(.tiled-bottom):not(.tiled-right):not(.tiled-top):not(.tiled)>box>box>box>GimpDock stack
+{
+	border-radius: 0 0 15px 15px;
+}
+
+window:not(.maximized):not(.tiled-left):not(.tiled-bottom):not(.tiled-right):not(.tiled-top):not(.tiled) #gimp-internal-dock-1 stack {
+	border-radius: 0 0 0 15px;
+}
+
+window:not(.maximized):not(.tiled-left):not(.tiled-bottom):not(.tiled-right):not(.tiled-top):not(.tiled) #gimp-internal-dock-2 stack {
+	border-radius: 0 0 15px 0;
+}
+
+headerbar {
+	background: none;
+	background-color: @window_bg_color;
+	border-bottom: .5px solid rgb(56, 58, 58);
+}
+
+menubar {
+	min-height: 12px;
+	padding: 6px 0;
+}
+
+menubar>menuitem {
+	min-height: 26px;
+	border-radius: 9px;
+	transition: all 300ms ease;
+}
+
+menubar>menuitem:hover {
+	background-color: rgba(222, 226, 223, 0.1);
+}

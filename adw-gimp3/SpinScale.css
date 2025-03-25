@@ -1,0 +1,53 @@
+GimpSpinScale {
+	background-color: rgba(222, 226, 223, 0.1);
+	border-radius: 9px;
+	min-height: 40px;
+	padding: 0;
+}
+
+GimpSpinScale entry {
+	background-color: rgba(0,0,0,0); 
+	border-radius: 9px 0 0 9px;
+	padding-left: 6px;
+	border: none;
+}
+
+GimpSpinScale entry progress {
+	border-radius: 9px 0 0 9px;
+	background-color: rgba(222, 226, 223, 0.1);
+	margin: 0px 0px;
+	border: none;
+	margin-left: -6px;
+}
+
+GimpSpinScale button.up,
+GimpSpinScale button.down {
+	background-color: rgba(0,0,0,0);
+	min-width: 24px;
+	padding: 0;
+	margin: 7px 0;
+	border-radius: 9px;
+}
+
+GimpSpinScale button.up:hover,
+GimpSpinScale button.down:hover {
+	background-color: rgba(222, 226, 223, 0.1);
+}
+
+GimpSpinScale button.down{
+	/* border-radius: 0; */
+}
+GimpSpinScale button.up{
+	/* border-radius: 0 9px 9px 0; */
+	margin-left: 2px;
+	margin-right: 7px;
+}
+
+GimpSpinScale+button.flat,
+GimpSpinScale+button.flat+button.flat.toggle {
+	min-width: 24px;
+	min-height: 24px;
+	border-radius: 100%;
+	padding: 0;
+	margin: 7px 2px;
+}

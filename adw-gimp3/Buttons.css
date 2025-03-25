@@ -1,0 +1,141 @@
+*:not(stackswitcher)>button.flat:not(.radio):not(.link),
+*:not(stackswitcher)>button.text-button:not(.link),
+*:not(.linked)>button.combo,
+spinbutton,
+*:not(combobox)~entry {
+    border-radius: 9px;
+}
+
+button {
+    outline: none;
+}
+
+button > image {
+    padding: 0;
+    margin: 0;
+}
+
+.gimp-internal-dock-2 button.flat.radio {
+    min-height: 24px;
+    min-width: 20px;
+    border-radius: 100%;
+}
+
+button.text-button {
+    min-height: 34px;
+    padding: 0px 8px;
+}
+
+combobox button.combo {
+    min-height: 34px;
+    padding: 0 6px;
+}
+
+combobox box.horizontal.linked button {
+    border-radius: 9px;
+}
+
+combobox box.horizontal.linked entry+button {
+    border-radius: 0 9px 9px 0;
+}
+
+combobox+boxbutton {
+    min-width: 30px
+}
+
+spinbutton {
+    min-height: 34px;
+}
+
+spinbutton button {
+    min-width: 34px;
+    padding: 0;
+}
+
+*:not(headerbar)>stackswitcher {
+    border-radius: 9px;
+    background-color: rgb(44, 47, 47);
+    padding: 3px 1px;
+}
+
+*:not(headerbar)>stackswitcher button {
+    border-radius: 6px;
+    padding: 4px;
+    background-color: transparent;
+    border: none;
+    margin: 0 1px;
+
+}
+
+*:not(headerbar)>stackswitcher button:checked,
+*:not(headerbar)>stackswitcher button:hover {
+    background-color: rgb(84, 87, 87);
+}
+
+
+GimpDock box box notebook stack widget>box>box>button {
+    min-height: 24px;
+    min-width: 24px;
+    margin: 0 0 0 2px;
+}
+
+GimpDock box box notebook stack widget>box>box {
+    padding: 6px
+}
+
+link,
+button.link {
+    transition: all 300ms ease;
+    padding: 0 4px;
+    min-height: 1rem;
+    border-radius: 3px;
+    box-shadow: 0 0 0 0px transparent;
+}
+
+link,
+button.link label {
+    color: @accent_fg_color;
+    text-decoration-line: none;
+}
+
+link:hover,
+button.link:hover,
+button.link:focus {
+    background: @accent_bg_color;
+    box-shadow: 0 0 0 6px @accent_bg_color;
+}
+
+tabs {
+    margin: 6px
+ }
+
+tabs tab {
+    border-radius: 9px;
+    min-height: 14px;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    transition: all 300ms ease-in-out;
+    margin-right: 4px
+}
+
+tabs tab:checked,
+tabs tab:hover {
+    background-color: rgba(222, 226, 223, 0.1);
+}
+
+tabs arrow {
+    margin: 6px;
+    border-radius: 100%
+}
+
+tabs+button.flat {
+    min-width: 1px;
+    min-height: 1px;
+    margin: 7px;
+    border-radius: 100%;
+}
+
+tab box button.flat {
+    border-radius: 100px
+}
