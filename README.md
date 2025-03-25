@@ -3,7 +3,7 @@
 _A complementary theme to adw-gtk3 for perfect GIMP styling_
 
 ### ⚠️ FLATPAK WARNING ⚠️
-Flatpak doesn't get your themes by default. To enable system themes in flatpaks follow this steps:
+Flatpak doesn’t apply your system themes by default. To enable them, follow these steps:
 
 1. Install [Flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal)
 2. Navigate to `All applications (global) → Filesystem → Other files`
