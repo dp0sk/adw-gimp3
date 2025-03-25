@@ -8,16 +8,16 @@ Flatpak doesn’t apply your system themes by default. To enable them, follow th
 1. Install [Flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal)
 2. Navigate to `All applications (global) → Filesystem → Other files`
 3. Add these lines: 	
-- `~/.config/gtk-3.0`
-- `~/.config/gtk-3.0:ro`
-- `~/.config/gtk-4.0`
-- `~/.config/gtk-4.0:ro`
-- `~/.themes`
-- `~/.themes:ro`
-- `xdg-config/gtk-3.0:ro`
-- `xdg-config/gtk-3.0`
-- `xdg-config/gtk-4.0:ro`
-- `xdg-config/gtk-4.0`
+   - `~/.config/gtk-3.0`
+   - `~/.config/gtk-3.0:ro`
+   - `~/.config/gtk-4.0`
+   - `~/.config/gtk-4.0:ro`
+   - `~/.themes`
+   - `~/.themes:ro`
+   - `xdg-config/gtk-3.0:ro`
+   - `xdg-config/gtk-3.0`
+   - `xdg-config/gtk-4.0:ro`
+   - `xdg-config/gtk-4.0`
 4. Now all your flatpak apps will be themed!
 
 ### Installation
