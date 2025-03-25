@@ -6,7 +6,7 @@ _A complementary theme to adw-gtk3 for perfect GIMP styling_
 Flatpak doesn't get your themes by default. To enable system themes in flatpaks follow this steps:
 
 1. Install [Flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal)
-2. Navigate to `All applications (global) -> Filesystem -> Other files`
+2. Navigate to `All applications (global) → Filesystem → Other files`
 3. Add these lines: 	
 - `~/.config/gtk-3.0`
 - `~/.config/gtk-3.0:ro`
