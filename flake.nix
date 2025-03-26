@@ -39,6 +39,16 @@
             '';
           };
         };
+        devShells.default = pkgs.mkShell {
+          name = "adw-gimp3";
+          packages = with pkgs; [
+            adw-gtk3
+          ];
+          inputsFrom = with pkgs; [
+            gimp-with-plugins
+            self'.packages.gimp
+          ];
+        };
         packages.default = self'.packages.gimp;
         packages.adw-gimp3 = pkgs.stdenv.mkDerivation {
           name = "adw-gimp3";
@@ -73,6 +83,7 @@
                 gimprc = pkgs.writeText "gimprc" ''
                   (theme-path "''${gimp_dir}/themes:''${gimp_data_dir}/themes:${unwrapped.outPath}/share/gimp/3.0/themes")
                   (theme "Adwaita")
+                  (custom-title-bar yes)
                 '';
               in {
                 basePackage = unwrapped;
@@ -81,6 +92,12 @@
             }
           ];
         };
+      };
+      flake.darwinModules.default = {pkgs, ...}: {
+        environment.systemPackages = with pkgs; [
+          self'.packages.gimp
+          adw-gtk3
+        ];
       };
       flake.nixosModules.default = {pkgs, ...}: {
         environment.systemPackages = with pkgs; [
