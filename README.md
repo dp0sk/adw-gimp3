@@ -5,6 +5,8 @@ A complementary theme to `adw-gtk3` for perfect GIMP styling.
 > [!NOTE]
 > Currently, only dark theme is officially supported (Light theme will be added later)
 
+> Windows & macOS support is planned (Will be supported in future updates)
+
 ![Theme preview](preview-dark.png)
 
 
@@ -24,46 +26,6 @@ A complementary theme to `adw-gtk3` for perfect GIMP styling.
 > This theme depends on [`adw-gtk3`](https://github.com/lassekongo83/adw-gtk3) installation,
 > for non-NixOS systems.
 > Follow the instructions there before proceeding with `adw-gimp3` installation.
-
-### Nix / NixOS
-
-[NixOS](https://nixos.org),
-[nix-darwin](https://github.com/LnL7/nix-darwin), &
-[home-manager](https://github.com/nix-community/home-manager)
-users can use the provided modules to install GIMP pre-loaded with the `adw-gimp3` theme in your environment configs:
-
-```nix
-{
-  inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
-    nix-darwin.url = "github:LnL7/nix-darwin/nix-darwin-24.11"
-    home-manager.url = "github:nix-community/home-manager";
-    adw-gimp3.url = "github:dp0sk/adw-gimp3";
-  };
-  outputs = inputs@{ nixpkgs, nix-darwin, adw-gimp3, ... }: {
-    # Install system-wide on a nix-darwin system:
-    darwinConfigurations."Johns-Macbook" = nix-darwin.lib.darwinSystem {
-      modules = [adw-gimp3.darwinModules.default];
-    };
-
-    # Install system-wide on a NixOS system:
-    nixosConfigurations.my-host = nixpkgs.lib.nixosSystem {
-      modules = [adw-gimp3.nixosModules.default];
-    };
-
-    # Install in your user home environment:
-    homeConfigurations.my-home = home-manager.lib.homeConfiguration {
-      modules = [adw-gimp3.homeManagerModules.default];
-    };
-  };
-}
-```
-
-or install GIMP 3.0 with `adw-gimp3` to a profile:
-
-```bash
-nix profile install github:dp0sk/adw-gimp3`
-```
 
 ### Manual Installation
 
@@ -116,7 +78,44 @@ nix profile install github:dp0sk/adw-gimp3`
    - `xdg-config/gtk-4.0:ro`
 4. Now all your flatpak apps will be themed!
 
-## Notes
 
-- Windows & macOS support is planned (Will be supported in future updates)
+### Nix / NixOS
+
+[NixOS](https://nixos.org),
+[nix-darwin](https://github.com/LnL7/nix-darwin), &
+[home-manager](https://github.com/nix-community/home-manager)
+users can use the provided modules to install GIMP pre-loaded with the `adw-gimp3` theme in your environment configs:
+
+```nix
+{
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nix-darwin.url = "github:LnL7/nix-darwin/nix-darwin-24.11"
+    home-manager.url = "github:nix-community/home-manager";
+    adw-gimp3.url = "github:dp0sk/adw-gimp3";
+  };
+  outputs = inputs@{ nixpkgs, nix-darwin, adw-gimp3, ... }: {
+    # Install system-wide on a nix-darwin system:
+    darwinConfigurations."Johns-Macbook" = nix-darwin.lib.darwinSystem {
+      modules = [adw-gimp3.darwinModules.default];
+    };
+
+    # Install system-wide on a NixOS system:
+    nixosConfigurations.my-host = nixpkgs.lib.nixosSystem {
+      modules = [adw-gimp3.nixosModules.default];
+    };
+
+    # Install in your user home environment:
+    homeConfigurations.my-home = home-manager.lib.homeConfiguration {
+      modules = [adw-gimp3.homeManagerModules.default];
+    };
+  };
+}
+```
+
+or install GIMP 3.0 with `adw-gimp3` to a profile:
+
+```bash
+nix profile install github:dp0sk/adw-gimp3`
+```
 
