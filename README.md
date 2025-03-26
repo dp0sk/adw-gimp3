@@ -4,7 +4,6 @@ A complementary theme to `adw-gtk3` for perfect GIMP styling.
 
 > [!NOTE]
 > Currently, only dark theme is officially supported (Light theme will be added later)
-
 > Windows & macOS support is planned (Will be supported in future updates)
 
 ![Theme preview](preview-dark.png)
