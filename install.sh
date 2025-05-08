@@ -36,5 +36,5 @@ fi
 
 echo '[flatpak] installing adw-gtk3 GTK3 theme for flatpaks...'
 if command -v flatpak >/dev/null; then
-  flatpak install --assume-yes --noninteractive org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark
+  flatpak install --assumeyes --noninteractive org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark
 fi
