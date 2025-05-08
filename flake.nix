@@ -1,9 +1,7 @@
 {
   description = "Flake for adw-gimp3 theme.";
   inputs = {
-    # Temporarily use nixpkgs fork until GIMP 3.0 is merged upstream
-    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs.url = "github:jtojnar/nixpkgs/gimp-meson";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
     wrapper-manager = {
       url = "github:viperML/wrapper-manager";
@@ -45,7 +43,7 @@
             adw-gtk3
           ];
           inputsFrom = with pkgs; [
-            gimp-with-plugins
+            gimp3-with-plugins
             self'.packages.gimp
           ];
         };
@@ -68,7 +66,7 @@
                   name = "gimp";
                   paths = [
                     pkgs.adw-gtk3
-                    pkgs.gimp-with-plugins
+                    pkgs.gimp3-with-plugins
                     (pkgs.stdenv.mkDerivation {
                       name = "adw-gimp3";
                       version = "2025-03-25";
